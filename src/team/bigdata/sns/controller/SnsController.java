@@ -9,24 +9,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import team.bigdata.common.service.SnsHaevaImpl;
-import team.bigdata.sns.service.SnsHaevaDelete;
-import team.bigdata.sns.service.SnsHaevaGetAllinfo;
-import team.bigdata.sns.service.SnsHaevaInsert;
-import team.bigdata.sns.service.SnsHaevasearchOne;
-import team.bigdata.sns.service.SnsHaevaupdate;
+import team.bigdata.common.service.Service;
+import team.bigdata.sns.service.SnsDelete;
+import team.bigdata.sns.service.SnsList;
+import team.bigdata.sns.service.SnsCreate;
+import team.bigdata.sns.service.SnsRead;
+import team.bigdata.sns.service.SnsUpdate;
 
 /**
  * Servlet implementation class SnsFrontController
  */
 @WebServlet("*.do")
-public class SnsFrontController extends HttpServlet {
+public class SnsController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public SnsFrontController() {
+	public SnsController() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -38,65 +38,70 @@ public class SnsFrontController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String c1 = request.getRequestURI().substring(request.getContextPath().length());
-		SnsHaevaImpl scmd1 = null;
-		String kaja = null;
+		// 
+		String url = request.getRequestURI().substring(request.getContextPath().length());
+		
+		// 
+		Service service = null;
+		String path = null;
 
-		if (c1.equals("/getAllinfo.do")) { /////////////////////
-			scmd1 = new SnsHaevaGetAllinfo();
+		// 
+		if (url.equals("/getAllinfo.do")) { /////////////////////
+			service = new SnsList();
 			try {
-				scmd1.haeva(request, response);
+				service.execute(request, response);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			kaja = "getAllinfo.jsp"; /////////////////
-		} else if (c1.equals("/keulWriting.do")) {
-			scmd1 = new SnsHaevaInsert();
+			path = "getAllinfo.jsp"; /////////////////
+		} else if (url.equals("/keulWriting.do")) {
+			service = new SnsCreate();
 			try {
-				scmd1.haeva(request, response);
+				service.execute(request, response);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			kaja = "keulWriting.jsp";
+			path = "keulWriting.jsp";
 
-		} else if (c1.equals("/keulSearchOne.do")) {
-			scmd1 = new SnsHaevasearchOne();
+		} else if (url.equals("/keulSearchOne.do")) {
+			service = new SnsRead();
 			try {
-				scmd1.haeva(request, response);
+				service.execute(request, response);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			kaja = "keulSearchOne.jsp";
+			path = "keulSearchOne.jsp";
 			// jsp를 만든다
 
-		} else if (c1.equals("/keulUpdating.do")) {
-			scmd1 = new SnsHaevaupdate();
+		} else if (url.equals("/keulUpdating.do")) {
+			service = new SnsUpdate();
 			try {
-				scmd1.haeva(request, response);
+				service.execute(request, response);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			kaja = "getAllinfo.do";
+			path = "getAllinfo.do";
 			// jsp를 안만들고 .do호출
 
-		} else if (c1.equals("/keulDeleting.do")) {
-			scmd1 = new SnsHaevaDelete();
+		} else if (url.equals("/keulDeleting.do")) {
+			service = new SnsDelete();
 			try {
-				scmd1.haeva(request, response);
+				service.execute(request, response);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			kaja = "getAllinfo.do";
+			path = "getAllinfo.do";
 			// jsp를 안만들고 .do호출
 		}
-
-		RequestDispatcher rd1 = request.getRequestDispatcher(kaja);
-		rd1.forward(request, response);
+		
+		// 
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher(path);
+		requestDispatcher.forward(request, response);
 	}
 
 	/**

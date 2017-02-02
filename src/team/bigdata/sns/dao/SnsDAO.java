@@ -11,11 +11,11 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-import team.bigdata.sns.vo.SnsboardVO;
+import team.bigdata.sns.vo.SnsVO;
 
-public class SnsboardDAO {
+public class SnsDAO {
 	DataSource ds; ////////////////
-	public SnsboardDAO () throws NamingException, SQLException{ //생성자
+	public SnsDAO () throws NamingException, SQLException{ //생성자
 		
 		Context initContext = new InitialContext();
 		   Context envContext  = (Context)initContext.lookup("java:/comp/env");
@@ -23,8 +23,8 @@ public class SnsboardDAO {
 		  // Connection conn = ds.getConnection();
 		   //etc.
 	}
-	public ArrayList<SnsboardVO> getAllInfo() throws SQLException{
-		ArrayList<SnsboardVO> array1 = new ArrayList<SnsboardVO>();
+	public ArrayList<SnsVO> getAllInfo() throws SQLException{
+		ArrayList<SnsVO> array1 = new ArrayList<SnsVO>();
 		 Connection conn = ds.getConnection(); /////////////////
 		 PreparedStatement ps1;
 		 ResultSet rs1;
@@ -43,7 +43,7 @@ public class SnsboardDAO {
 			int daetbun = rs1.getInt("daetbun");
 			int daetdaetbun = rs1.getInt("daetdaetbun");
 			
-			SnsboardVO svo1 = new SnsboardVO(bunho,snsjemok,snswriter,snscontent,basebun,daetbun,daetdaetbun);
+			SnsVO svo1 = new SnsVO(bunho,snsjemok,snswriter,snscontent,basebun,daetbun,daetdaetbun);
 			array1.add(svo1);
 		}
 		return array1;
@@ -65,14 +65,14 @@ public class SnsboardDAO {
 		ps1.executeUpdate();	
 		
 	}
-	public SnsboardVO search_sns(String ori_snsjemok) throws SQLException{
+	public SnsVO search_sns(String ori_snsjemok) throws SQLException{
 		 Connection conn = ds.getConnection(); /////////////////
 		 PreparedStatement ps1;
 		 ResultSet rs1;
 		 
 		
 		// SnsboardVO sv1=null;
-		 SnsboardVO sv1 = new SnsboardVO();
+		 SnsVO sv1 = new SnsVO();
 			String sql = "SELECT * FROM mvcsnsboard where snsjemok=?";
 			ps1 = conn.prepareStatement(sql);
 			ps1.setString(1, ori_snsjemok);

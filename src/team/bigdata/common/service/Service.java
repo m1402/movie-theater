@@ -4,8 +4,8 @@ import javax.naming.NamingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public interface SnsHaevaImpl {
+public interface Service {
 
-public void haeva(HttpServletRequest request,  HttpServletResponse response) throws NamingException, Exception;
+public void execute(HttpServletRequest request,  HttpServletResponse response) throws NamingException, Exception;
 
 }
