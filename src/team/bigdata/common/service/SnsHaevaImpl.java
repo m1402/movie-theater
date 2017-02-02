@@ -1,4 +1,4 @@
-package com.haeva.my;
+package team.bigdata.common.service;
 
 import javax.naming.NamingException;
 import javax.servlet.http.HttpServletRequest;

@@ -1,4 +1,4 @@
-package com.haeva.my;
+package team.bigdata.sns.service;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -7,15 +7,16 @@ import javax.naming.NamingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.snsboardDAO.my.SnsboardDAO;
-import com.snsboardVO.my.SnsboardVO;
+import team.bigdata.common.service.SnsHaevaImpl;
+import team.bigdata.sns.dao.SnsboardDAO;
+import team.bigdata.sns.vo.SnsboardVO;
 
-public class SnsHaevaGetAllinfo implements SnsHaevaImpl {
+public class SnsHaevaDelete implements SnsHaevaImpl {
 	public void haeva(HttpServletRequest request,  HttpServletResponse response) throws NamingException, Exception{
+		String snsjemok=request.getParameter("snsjemok");
 		SnsboardDAO snsdao1=new SnsboardDAO();
-		ArrayList <SnsboardVO> alist1=snsdao1.getAllInfo();
+		snsdao1.delete_sns(snsjemok);
 		
-		request.setAttribute("alist1", alist1);
 		
 	}
 }

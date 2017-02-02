@@ -1,4 +1,4 @@
-package com.snsboardDAO.my;
+package team.bigdata.sns.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,7 +11,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-import com.snsboardVO.my.SnsboardVO;
+import team.bigdata.sns.vo.SnsboardVO;
 
 public class SnsboardDAO {
 	DataSource ds; ////////////////

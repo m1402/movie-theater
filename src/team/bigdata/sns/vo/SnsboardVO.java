@@ -1,4 +1,4 @@
-package com.snsboardVO.my;
+package team.bigdata.sns.vo;
 
 public class SnsboardVO {
      int          bunho;
