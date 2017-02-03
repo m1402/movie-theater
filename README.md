@@ -11,6 +11,8 @@
 # dev
 
 * Java 1.8
+* Servlet & JSP
+* MVC / Model 2
 * Oracle 11g
 * JDBC
 * Tomcat 8
