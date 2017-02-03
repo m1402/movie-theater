@@ -50,13 +50,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="login.lhj">Login</a>
+                        <a class="page-scroll" href="userLogin.lhj">Login</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="moviePlaying.ksr">Movies</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="ticketing.kms">Ticketing</a>
+                        <a class="page-scroll" href="startBook.kms">Ticketing</a>
                     </li>
 <!--                     
                     <li>
