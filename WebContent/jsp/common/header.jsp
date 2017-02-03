@@ -49,9 +49,25 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="userLogin.lhj">Login</a>
-                    </li>
+                	<c:choose>
+                		<c:when test="${loginUser == null}">
+		                    <li>
+		                        <a class="page-scroll" href="userLogin.lhj">Login</a>
+		                    </li>
+                		</c:when>
+                		<c:otherwise>
+		                    <li>
+		                        <a class="page-scroll" href="userLogout.lhj">Logout</a>
+		                    </li>
+		                	<c:choose>
+		                		<c:when test="${loginUser.auth == 'A'}">
+				                    <li>
+				                        <a class="page-scroll" href="adminMain.kms2">Admin</a>
+				                    </li>
+		                		</c:when>
+		                	</c:choose>
+                		</c:otherwise>
+                	</c:choose>
                     <li>
                         <a class="page-scroll" href="moviePlaying.ksr">Movies</a>
                     </li>

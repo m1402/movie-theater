@@ -14,11 +14,11 @@ public class UserLoginCheck implements Service {
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		
-		// DB Á¶È¸
+		// DB ï¿½ï¿½È¸
 		UserDAO userDAO = new UserDAO();
-		boolean isUser = userDAO.userLoginCheck(id, pw);
+		boolean isUser = userDAO.userLoginCheck(id, pw, request);
 		
-		// µ¥ÀÌÅÍ ÀúÀå
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		request.setAttribute("isUser", isUser);
 		
 	}

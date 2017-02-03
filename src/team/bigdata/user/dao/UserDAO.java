@@ -9,9 +9,11 @@ import java.util.ArrayList;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
+import javax.servlet.http.HttpServletRequest;
 import javax.sql.DataSource;
 
 import team.bigdata.template.vo.TemplateVO;
+import team.bigdata.user.vo.UserVO;
 
 public class UserDAO {
 	
@@ -26,12 +28,12 @@ public class UserDAO {
 	}
 
 	//  
-	public boolean userLoginCheck(String id, String pw) throws SQLException {
+	public boolean userLoginCheck(String id, String pw, HttpServletRequest request) throws SQLException {
 		
 		// return value
 		boolean userLoginCheckResult = false;
 		
-		// Ä¿³Ø¼Ç
+		// Ä¿ï¿½Ø¼ï¿½
 		Connection conn = ds.getConnection();
 		PreparedStatement ps1;
 		ResultSet rs1;
@@ -50,10 +52,22 @@ public class UserDAO {
 		ps1.setString(1, id);
 		ps1.setString(2, pw);
 		
-		// db Á¶È¸
+		// db ï¿½ï¿½È¸
 		rs1 = ps1.executeQuery();
 		while (rs1.next()) {
-			userLoginCheckResult = true; // °á°ú°¡ ÀÖÀ¸¸é true·Î
+			
+//			String id       = rs1.getString("id");
+//			String pw       = rs1.getString("pw");
+			String name     = rs1.getString("name");
+			String auth		= rs1.getString("auth");
+			
+			UserVO loginUser = new UserVO(id, pw, name, auth);
+			
+			// session
+			request.getSession().setAttribute("loginUser", loginUser);
+						
+			// 
+			userLoginCheckResult = true; // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ trueï¿½ï¿½
 		}
 		
 		return userLoginCheckResult;
@@ -65,7 +79,7 @@ public class UserDAO {
 		// return value
 		int userJoinResult = 0;
 		
-		// Ä¿³Ø¼Ç
+		// Ä¿ï¿½Ø¼ï¿½
 		Connection conn = ds.getConnection();
 		PreparedStatement ps1;
 		ResultSet rs1;
