@@ -17,8 +17,8 @@
 	<tr>
 		<td align="right">
 			<select name="searchCondition">
-			<option value="TITLE">제목
-			<option value="CONTENT">내용
+			<option value="TITLE">영화제목
+			<option value="CONTENT">감독
 			</select>
 			<input name="searchKeyword" type="text"/>
 			<input type="submit" value="검색"/>
@@ -40,10 +40,10 @@ width="700">
 <tr>
 	<td align="center" width="100" height="120">2017-02-01</td>
 	<td align="left" width="350">
-	<img src="static/img/movie/kongjo.jpg" width="50" height="70"></br>
+	<img src="static/img/movie/fallingsnow.jpg" width="50" height="70"></br>
 	<a href="getBoard.jsp">예매하기</a></td>
-	<td align="center" width="100">공조</td>
-	<td align="center" width="100">김성훈</td>
+	<td align="center" width="100">폴링 스노우</td>
+	<td align="center" width="100">샤밈 샤리프</td>
 	
 </tr>
 
@@ -54,20 +54,7 @@ width="700">
 <tr>
 	<td align="center" width="100" height="120">2017-02-22</td>
 	<td align="left" width="350">
-	<img src="static/img/movie/contact.jpg" width="50" height="70"></br>
-	<a href="getBoard.jsp">예매하기</a></td>
-	<td align="center" width="100">폴링 스노우</td>
-	<td align="center" width="100">샤밈 샤리프</td>
-</tr>
-
-
-
-
-
-<tr>
-	<td align="center" width="100" height="120">2017-03-01</td>
-	<td align="left" width="350">
-	<img src="static/img/movie/FabricatedCity.jpg" width="50" height="70"></br>
+	<img src="static/img/movie/snorden.jpg" width="50" height="70"></br>
 	<a href="getBoard.jsp">예매하기</a></td>
 	<td align="center" width="100">스노든</td>
 	<td align="center" width="100">올리버 스톤</td>
@@ -78,21 +65,35 @@ width="700">
 
 
 <tr>
+	<td align="center" width="100" height="120">2017-03-01</td>
+	<td align="left" width="350">
+	<img src="static/img/movie/thecure.jpg" width="50" height="70"></br>
+	<a href="getBoard.jsp">예매하기</a></td>
+	<td align="center" width="100">더큐어</td>
+	<td align="center" width="100">고어 버빈스키</td>
+</tr>
+
+
+
+
+
+<tr>
 	<td align="center" width="100" height="120">2017-03-12</td>
 	<td align="left" width="350">
-	<img src="static/img/movie/moana.jpg" width="50" height="70"></br>
+	<img src="static/img/movie/moonlight.jpg" width="50" height="70"></br>
 	<a href="getBoard.jsp">예매하기</a></td>
-	<td align="center" width="100">더 큐어</td>
-	<td align="center" width="100">고어 버빈스키</td>
+	<td align="center" width="100">문라이트</td>
+	<td align="center" width="100">배리 젠킨스</td>
 </tr>
 
 <tr>
 	<td align="center" width="100" height="120">2017-03-30</td>
 	<td align="left" width="350">
-	<img src="static/img/movie/starwars.jpg" width="50" height="70"></br>
+	<img src="static/img/movie/lovemovie.jpg" width="50" height="70"></br>
 	<a href="getBoard.jsp">예매하기</a></td>
-	<td align="center" width="100">문라이트</td>
-	<td align="center" width="100">배리 젠킨스</td>
+	<td align="center" width="100">사랑의 시대</td>
+	<td align="center" width="100">토마스 빈터베르그
+	</td>
 </tr>
 
 

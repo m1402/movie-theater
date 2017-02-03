@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> CSS 마우스 오버 효과 </title>
+	
+	<style type="text/css">
+ 	a:link { color: white; text-decoration: none;}
+ 	a:visited { color: white; text-decoration: none;}
+  	a:active { color: white; text-decoration: none;}
+ 	a:hover { color: white; text-decoration: none;}
+	</style>
+
+	<style type="text/css">
+
+		#menubar div{
+								width:90px; padding:10px 5px;
+								float:left; text-align:center; 
+								font-size:13px; font-weight:bold;  
+								background:#999;
+								}
+
+		#menubar div:hover{background:#555; color:#fff;}
+		
+
+		#menubar1 div{
+								width:90px; padding:10px 5px;
+								float:left; text-align:center; 
+								font-size:13px; font-weight:bold;  
+								background:#999;
+								}
+
+		#menubar1 div:hover{background:url('./img/image.jpg'); color:#fff; width:150px;}
+	</style>
+ </head>
+
+ <body>
+<div style="height:100px;"></div>
+<div id="menubar">
+	<div><a href="#">Home</a></div>
+	<div>영화정보</div>
+	<div>영화예매</div>
+	<div>게시판</div>
+	<div>고객센터</div>
+</div>
+
+<div style="height:100px; clear:both;"></div>
+
+<div id="menubar1">
+	<div>메뉴1</div>
+	<div>메뉴2</div>
+	<div>메뉴3</div>
+	<div>메뉴4</div>
+	<div>메뉴5</div>
+	<div>메뉴6</div>
+</div>
+
+ </body>
+</html>

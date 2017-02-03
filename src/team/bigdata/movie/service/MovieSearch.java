@@ -12,14 +12,14 @@ import team.bigdata.movie.vo.MovieVO;
 import team.bigdata.sns.dao.SnsDAO;
 import team.bigdata.sns.vo.SnsVO;
 
-public class MoviePlaying implements Service {
+public class MovieSearch implements Service {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws NamingException, Exception {
-		
-		// 데이터 조회
-		MovieDAO movieDao = new MovieDAO();
-		ArrayList<MovieVO> moviePlayingList = movieDao.moviePlaying(6, 10);
-		
-		// 데이터 저장
-		request.setAttribute("moviePlayingList", moviePlayingList);
+//		String movieSearch = request.getParameter("title");
+//		String movieSearch = request.getParameter("dir");
+//		
+//		MovieDAO moviedao1 = new MovieDAO();
+//		MovieVO mv1 = moviedao1.search_movie(movieSearch);
+//
+//		request.setAttribute("mv1", mv1);
 	}
 }
