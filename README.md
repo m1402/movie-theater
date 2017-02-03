@@ -1,8 +1,22 @@
 # movie-theater
+영화관 온라인 예매 서비스
 
-# content
+# contents
 
-* 로그인
-* 영화정보
-* 예매
-* 고객센터
+* Login - LHJ
+* Movies - KSR
+* Ticketing & Admin - KMS
+* About - CHH
+
+# dev
+
+* Java 1.8
+* Oracle 11g
+* JDBC
+* Tomcat 8
+* Eclipse
+* Dynamic Web Project
+
+# issue
+
+* db connection close
