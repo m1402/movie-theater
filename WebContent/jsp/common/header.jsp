@@ -43,24 +43,26 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Movie Theater</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#about">Login</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#services">Movies</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                        <a class="page-scroll" href="#portfolio">Ticketing</a>
                     </li>
+<!--                     
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
+ -->                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -69,7 +71,6 @@
     </nav>
 	<!-- // navigation -->
 
-	<!-- header -->
 <!-- 	
     <header>
         <div class="header-content">
@@ -83,11 +84,14 @@
     </header>
  -->    
     
+	<!-- header -->
     <aside class="bg-dark">
         <div class="container text-center">
             <div class="call-to-action">
+<!--                 
                 <h2>Free Download at Start Bootstrap!</h2>
                 <a href="http://startbootstrap.com/template-overviews/creative/" class="btn btn-default btn-xl sr-button">Download Now!</a>
+ -->                
             </div>
         </div>
     </aside>    
