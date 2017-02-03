@@ -57,6 +57,9 @@
                 		</c:when>
                 		<c:otherwise>
 		                    <li>
+		                        <a class="page-scroll" href="#">${loginUser.name} (${loginUser.id}) 님 환영합니다.</a>
+		                    </li>
+		                    <li>
 		                        <a class="page-scroll" href="userLogout.lhj">Logout</a>
 		                    </li>
 		                	<c:choose>
