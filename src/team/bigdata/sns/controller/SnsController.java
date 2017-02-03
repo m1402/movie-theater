@@ -21,6 +21,7 @@ import team.bigdata.sns.service.SnsUpdate;
  */
 @WebServlet("*.do")
 public class SnsController extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -28,7 +29,6 @@ public class SnsController extends HttpServlet {
 	 */
 	public SnsController() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -38,68 +38,57 @@ public class SnsController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		// 
+		// url 분석
 		String url = request.getRequestURI().substring(request.getContextPath().length());
 		
 		// 
 		Service service = null;
 		String path = null;
 
-		// 
-		if (url.equals("/getAllinfo.do")) { /////////////////////
+		// url 별 MVC 처리
+		if (url.equals("/getAllinfo.do")) {
 			service = new SnsList();
 			try {
 				service.execute(request, response);
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			path = "getAllinfo.jsp"; /////////////////
+			path = "getAllinfo.jsp";
 		} else if (url.equals("/keulWriting.do")) {
 			service = new SnsCreate();
 			try {
 				service.execute(request, response);
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			path = "keulWriting.jsp";
-
 		} else if (url.equals("/keulSearchOne.do")) {
 			service = new SnsRead();
 			try {
 				service.execute(request, response);
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			path = "keulSearchOne.jsp";
-			// jsp를 만든다
-
 		} else if (url.equals("/keulUpdating.do")) {
 			service = new SnsUpdate();
 			try {
 				service.execute(request, response);
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			path = "getAllinfo.do";
-			// jsp를 안만들고 .do호출
-
+			path = "getAllinfo.do"; // List로 리다이렉트
 		} else if (url.equals("/keulDeleting.do")) {
 			service = new SnsDelete();
 			try {
 				service.execute(request, response);
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			path = "getAllinfo.do";
-			// jsp를 안만들고 .do호출
+			path = "getAllinfo.do"; // List로 리다이렉트
 		}
 		
-		// 
+		// response 응답처리
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher(path);
 		requestDispatcher.forward(request, response);
 	}
@@ -110,7 +99,6 @@ public class SnsController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 
