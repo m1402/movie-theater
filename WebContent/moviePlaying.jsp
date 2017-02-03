@@ -9,8 +9,6 @@
 
 <center>
 <h1>현재 상영작</h1>
-<h3><font color="blue">
-   회원</font>님 로그인 환영합니다</h3>
 
 <form action="#" method="post">
  
@@ -44,7 +42,7 @@ width="700">
 		<td align="center" width="100" height="120">${vo1.num}</td>
 		<td align="left" width="350"><img
 			src="static/img/movie/${vo1.imgurl}.jpg" width="50" height="70"></br>
-			<a href="getBoard.jsp">예매하기</a></td>
+			<a href="startBook.kms?num=${vo1.num}">예매하기</a></td>
 		<td align="center" width="100">${vo1.title}</td>
 		<td align="center" width="100">${fn:substring(vo1.day, 0, 10)}</td>
 		<td align="center" width="100">${vo1.bookp}%</td>
