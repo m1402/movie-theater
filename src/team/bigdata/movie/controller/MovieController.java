@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import team.bigdata.common.service.Service;
 import team.bigdata.movie.service.MoviePlaying;
+import team.bigdata.movie.service.MovieSearch;
 
 /**
  * Servlet implementation class SnsFrontController
@@ -51,6 +52,38 @@ public class MovieController extends HttpServlet {
 			}
 			path = "moviePlaying.jsp";
 		}
+		
+		
+		
+		
+		else if (url.equals("/movieRanking.ksr")) {
+			service = new MovieSearch();
+			try {
+				service.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			path = "movieRanking.jsp";
+		}
+		
+		
+		
+		
+//		else if (url.equals("/movieUnreleased.ksr")) {
+//			service = new MovieUnreleased();
+//			try {
+//				service.execute(request, response);
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			}
+//			path = "movieUnreleased.jsp";
+//		}
+		
+		
+		
+		
+		
+		
 		
 		// response ?ùë?ãµÏ≤òÎ¶¨
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher(path);

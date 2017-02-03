@@ -14,9 +14,12 @@ import team.bigdata.sns.vo.SnsVO;
 
 public class MoviePlaying implements Service {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws NamingException, Exception {
-		MovieDAO movieDao = new MovieDAO();
-		ArrayList<MovieVO> moviePlayingList = movieDao.moviePlaying();
 		
+		// 데이터 조회
+		MovieDAO movieDao = new MovieDAO();
+		ArrayList<MovieVO> moviePlayingList = movieDao.moviePlaying(6, 10);
+		
+		// 데이터 저장
 		request.setAttribute("moviePlayingList", moviePlayingList);
 	}
 }

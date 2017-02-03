@@ -1,10 +1,11 @@
-
 create table MovieInfo (
-  num  number(5),
-  title  varchar2(100),
-  dir	varchar2(100),
-  bookp   number(3),
-  day   date
+  num  number(30),
+  title  varchar2(300),
+  dir	varchar2(300),
+  bookp   number(30),
+  imgurl  varchar2(50),
+  day   date,
+  fday date
 );
 
 
@@ -17,13 +18,13 @@ insert into MovieInfo (num, title, dir, day)
 values (2, '스노든', '올리버 스톤', '20170301');
 
 insert into MovieInfo (num, title, dir, day)
-value (3, '더 큐어', '고어 버번스키',  '20170201');
+values (3, '더 큐어', '고어 버번스키', '20170201');
 
 insert into MovieInfo (num, title, dir, day)
-value (4, '문라이트', '배리 젠킨스', '20170312');
+values (4, '문라이트', '배리 젠킨스', '20170312');
 
 insert into MovieInfo (num, title, dir, day)
-value (5, '사랑의 시대', '토마스 빈터베르그', '20170330');
+values (5, '사랑의 시대', '토마스 빈터베르그', '20170330');
 
 
 
@@ -31,24 +32,23 @@ value (5, '사랑의 시대', '토마스 빈터베르그', '20170330');
 
 
 insert into MovieInfo
-values (1,'컨택트',20,'20170222');
+values (6,'컨택트', '드니 빌뇌브', 41, 'contact', '20161222', '20170322');
 
 insert into MovieInfo
-values (2,'조작된 도시',30,'20170301');
+values (7,'조작된 도시', '박광현', 30, 'FabricatedCity', '20161231', '20170331');
 
 insert into MovieInfo
-values (3,'공조',10,'20170201');
+values (8,'공조', '김성훈', 25, 'kongjo', '20170101', '20170401');
 
 insert into MovieInfo
-values (4,'모아나', 13,'20170312');
+values (9,'모아나', '론 클레먼츠', 13, 'moana', '20170201', '20170501');
 
 insert into MovieInfo
-values (5,'스타워즈', 50,'20170330');
+values (10,'스타워즈', '데이브 필로니', 6, 'starwars', '20170205', '20170505');
 
 
 
-
-
+drop table MovieInfo
 
 
 select * from MovieInfo
