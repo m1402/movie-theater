@@ -46,7 +46,9 @@ public class SnsController extends HttpServlet {
 		String path = null;
 
 		// url 별 MVC 처리
-		if (url.equals("/getAllinfo.do")) {
+		if (url.equals("/index.do")) {
+			path = "moviePlaying.ksr";
+		} else if (url.equals("/getAllinfo.do")) {
 			service = new SnsList();
 			try {
 				service.execute(request, response);
