@@ -15,6 +15,7 @@ import team.bigdata.sns.service.SnsList;
 import team.bigdata.sns.service.SnsCreate;
 import team.bigdata.sns.service.SnsRead;
 import team.bigdata.sns.service.SnsUpdate;
+import team.bigdata.user.service.UserJoinRequest;
 import team.bigdata.user.service.UserLoginCheck;
 
 /**
@@ -57,6 +58,14 @@ public class UserController extends HttpServlet {
 				e.printStackTrace();
 			}
 			path = "userLoginResult.jsp";
+		} else if(url.equals("/userJoinRequest.lhj")) {
+			service = new UserJoinRequest(); // service 생성
+			try {
+				service.execute(request, response); // service.execute() 실행
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			path = "userJoinResult.jsp";
 		}
 		
 		// response ?쓳?떟泥섎━

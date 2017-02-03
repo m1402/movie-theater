@@ -22,7 +22,7 @@
 			<table>
 				<tr>
 					<th><button type="submit">로그인</button></th>
-					<th><button onClick="location.href='JOIN.jsp'">회원가입</button></th>
+					<th><button type="button" onClick="location.href='userJoin.jsp'">회원가입</button></th>
 				</tr>
 			</table>
 		</form>

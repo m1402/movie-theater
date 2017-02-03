@@ -58,6 +58,37 @@ public class UserDAO {
 		
 		return userLoginCheckResult;
 	}
+	
+	//  
+	public int userJoinRequest(String id, String pw, String name, String auth) throws SQLException {
+		
+		// return value
+		int userJoinResult = 0;
+		
+		// Ä¿³Ø¼Ç
+		Connection conn = ds.getConnection();
+		PreparedStatement ps1;
+		ResultSet rs1;
+		
+		// query
+		String sql = ""
+				+ "INSERT INTO usertable"
+				+ " VALUES (?, ?, ?, ?)";
+		
+		// 
+		ps1 = conn.prepareStatement(sql);
+		
+		// set preparestatement
+		ps1.setString(1, id);
+		ps1.setString(2, pw);
+		ps1.setString(3, name);
+		ps1.setString(4, auth);
+		
+		// db
+		userJoinResult = ps1.executeUpdate();
+		
+		return userJoinResult;
+	}
 
 
 }
