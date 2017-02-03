@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>UI</title>
+<script type="text/javascript" src="static/js/book/dt/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="static/js/book/dt/jquery-ui-1.8.10.custom.min.js"></script>
+<script type="text/javascript" src="static/js/book/dt/jquery.ui.datepicker.js"></script>
+<script type="text/javascript" src="static/js/book/dt/jquery.ui.widget.js"></script>
+
+<link rel="stylesheet" type="text/css"
+	href="static/js/book/dt/jquery.ui.datepicker.css" />
+<link rel="stylesheet" type="text/css" href="static/js/book/dt/jquery.ui.all.css" />
+
+
+<script type="text/javascript">
+	$(function() {
+		$("#dtp1").datepicker({
+			changeYear : true,
+			changeMonth : true,
+			dateFormat : 'yy-mm-dd'
+		//20121225 (기본:12/25/2012)
+		});
+	});
+</script>
+
+</head>
+<body>
+
+	<h1>영화 예매</h1>
+	<form name=form1>
+		영화선택 <input type="text" id="dtp2">
+		극장선택 <input type="text" id="dtp2">
+		날짜선택 <input type="text" id="dtp1">
+	</form>
+	<form name=form2>
+		상영시간표 <input type="text" id="dtp2">
+		인원선택 <input type="text" id="dtp2">	
+	</form>
+	<form name=form3>
+		좌석선택 <input type="text" id="dtp2">
+	</form>
+</body>
+</html>
