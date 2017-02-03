@@ -50,13 +50,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">Login</a>
+                        <a class="page-scroll" href="login.lhj">Login</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Movies</a>
+                        <a class="page-scroll" href="moviePlaying.ksr">Movies</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Ticketing</a>
+                        <a class="page-scroll" href="ticketing.kms">Ticketing</a>
                     </li>
 <!--                     
                     <li>
@@ -97,4 +97,7 @@
     </aside>    
 	<!-- // header -->
     
-	<div>
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">

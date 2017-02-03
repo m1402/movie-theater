@@ -1,4 +1,7 @@
-	</div>
+                </div>
+            </div>
+        </div>
+	</section>
 
 	<!-- footer -->
     <section id="contact">
@@ -9,7 +12,7 @@
                     <h2 class="section-heading">Let's Get In Touch!</h2>
                     <hr class="primary">
  -->                    
-                    <p>COPYRIGHT m1402. ALL RIGHTS RESERVED</p>
+                    <p>COPYRIGHT Movie Theater. ALL RIGHTS RESERVED</p>
                 </div>
 <!--                 
                 <div class="col-lg-4 col-lg-offset-2 text-center">
