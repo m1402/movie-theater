@@ -19,7 +19,7 @@ import team.bigdata.sns.service.SnsUpdate;
 /**
  * Servlet implementation class SnsFrontController
  */
-@WebServlet("*.do")
+@WebServlet("*.template")
 public class TemplateController extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
