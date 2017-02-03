@@ -1,4 +1,4 @@
-package team.bigdata.sns.controller;
+package team.bigdata.template.controller;
 
 import java.io.IOException;
 
@@ -19,15 +19,15 @@ import team.bigdata.sns.service.SnsUpdate;
 /**
  * Servlet implementation class SnsFrontController
  */
-@WebServlet("*.do")
-public class SnsController extends HttpServlet {
+@WebServlet("*.template")
+public class TemplateController extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public SnsController() {
+	public TemplateController() {
 		super();
 	}
 
@@ -46,9 +46,7 @@ public class SnsController extends HttpServlet {
 		String path = null;
 
 		// url 별 MVC 처리
-		if (url.equals("/index.do")) {
-			path = "moviePlaying.ksr";
-		} else if (url.equals("/getAllinfo.do")) {
+		if (url.equals("/getAllinfo.do")) {
 			service = new SnsList();
 			try {
 				service.execute(request, response);

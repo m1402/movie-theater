@@ -1,4 +1,4 @@
-package team.bigdata.sns.controller;
+package team.bigdata.user.controller;
 
 import java.io.IOException;
 
@@ -15,19 +15,21 @@ import team.bigdata.sns.service.SnsList;
 import team.bigdata.sns.service.SnsCreate;
 import team.bigdata.sns.service.SnsRead;
 import team.bigdata.sns.service.SnsUpdate;
+import team.bigdata.user.service.UserJoinRequest;
+import team.bigdata.user.service.UserLoginCheck;
 
 /**
  * Servlet implementation class SnsFrontController
  */
-@WebServlet("*.do")
-public class SnsController extends HttpServlet {
+@WebServlet("*.lhj")
+public class UserController extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public SnsController() {
+	public UserController() {
 		super();
 	}
 
@@ -45,52 +47,28 @@ public class SnsController extends HttpServlet {
 		Service service = null;
 		String path = null;
 
-		// url Î≥Ñ MVC Ï≤òÎ¶¨
-		if (url.equals("/index.do")) {
-			path = "moviePlaying.ksr";
-		} else if (url.equals("/getAllinfo.do")) {
-			service = new SnsList();
+		// url Î≥? MVC Ï≤òÎ¶¨
+		if (url.equals("/userLogin.lhj")) {
+			path = "userLogin.jsp";
+		} else if(url.equals("/userLoginCheck.lhj")) {
+			service = new UserLoginCheck(); // service ª˝º∫
 			try {
-				service.execute(request, response);
+				service.execute(request, response); // service.execute() Ω««‡
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			path = "getAllinfo.jsp";
-		} else if (url.equals("/keulWriting.do")) {
-			service = new SnsCreate();
+			path = "userLoginResult.jsp";
+		} else if(url.equals("/userJoinRequest.lhj")) {
+			service = new UserJoinRequest(); // service ª˝º∫
 			try {
-				service.execute(request, response);
+				service.execute(request, response); // service.execute() Ω««‡
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			path = "keulWriting.jsp";
-		} else if (url.equals("/keulSearchOne.do")) {
-			service = new SnsRead();
-			try {
-				service.execute(request, response);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			path = "keulSearchOne.jsp";
-		} else if (url.equals("/keulUpdating.do")) {
-			service = new SnsUpdate();
-			try {
-				service.execute(request, response);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			path = "getAllinfo.do"; // ListÎ°ú Î¶¨Îã§Ïù¥Î†âÌä∏
-		} else if (url.equals("/keulDeleting.do")) {
-			service = new SnsDelete();
-			try {
-				service.execute(request, response);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			path = "getAllinfo.do"; // ListÎ°ú Î¶¨Îã§Ïù¥Î†âÌä∏
+			path = "userJoinResult.jsp";
 		}
 		
-		// response ÏùëÎãµÏ≤òÎ¶¨
+		// response ?ùë?ãµÏ≤òÎ¶¨
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher(path);
 		requestDispatcher.forward(request, response);
 	}
