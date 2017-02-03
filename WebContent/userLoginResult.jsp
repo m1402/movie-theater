@@ -10,8 +10,14 @@
 	<span>로그인 성공</span>
 </c:if>
 <c:if test="${isUser == false}">
-	<span>로그인 실패</span>
+	<span><h1>로그인 실패</h1></span>
 </c:if> 
+
+<!-- 로그인 실패 시 되돌아가기 버튼 -->
+<p>
+<button type="button" onClick="location.href='userLogin.jsp'"><span>되돌아가기</span></button>
+</p>
+
 
 <!-- // 컨텐츠 종료 -->
 
