@@ -10,9 +10,10 @@ import team.bigdata.movie.dao.MovieAdminDAO;
 
 public class MovieDelete implements Service {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws NamingException, Exception {
-		String title = request.getParameter("title");
+		String num = request.getParameter("num");
+		
 		MovieAdminDAO MovieAdminDAO1 = new MovieAdminDAO();
-		MovieAdminDAO1.delete_movie(title);
+		MovieAdminDAO1.delete_movie(num);
 
 	}
 }

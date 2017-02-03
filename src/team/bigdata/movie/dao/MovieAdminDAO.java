@@ -33,7 +33,7 @@ public class MovieAdminDAO {
 
 		String sql = "SELECT num, title, dir, bookp, day"
 				+ " from MovieInfo "
-				+ " order by bookp desc ";
+				+ " order by num desc ";
 
 		ps1 = conn.prepareStatement(sql);
 		rs1 = ps1.executeQuery();
@@ -85,32 +85,31 @@ public class MovieAdminDAO {
 		PreparedStatement ps1;
 		// ResultSet rs1;
 
-		String sql = "insert into MovieInfo values"
-				+ " (MovieInfo_sequence1.NEXTVAL,?,?,?,?,?,MovieInfo_sequence1.CURRVAL,0,0 )";
+		String sql = "insert into MovieInfo (num, title, dir, bookp, day) values"
+				+ " ( (select max(num) + 1 from movieinfo), ?, ?, ?, ?)";
 
 		ps1 = conn.prepareStatement(sql);
 		// rs1 = ps1.executeQuery();
-		ps1.setString(1, num);
-		ps1.setString(2, title);
-		ps1.setString(3, dir);
-		ps1.setString(4, bookp);
-		ps1.setString(5, day);
+		ps1.setString(1, title);
+		ps1.setString(2, dir);
+		ps1.setInt(3, Integer.parseInt(bookp));
+		ps1.setString(4, day);
 
 		ps1.executeUpdate();
 
 	}
 	
-	public void delete_movie(String title) throws SQLException {
+	public void delete_movie(String num) throws SQLException {
 
 		Connection conn = ds.getConnection(); /////////////////
 		PreparedStatement ps1;
 		// ResultSet rs1;
 
-		String sql = "delete MovieInfo where title=?";
+		String sql = "delete MovieInfo where num=?";
 
 		try {
 			ps1 = conn.prepareStatement(sql);
-			ps1.setString(1, title);
+			ps1.setInt(1, Integer.parseInt(num));
 			ps1.executeUpdate();
 		} catch (SQLException e) {
 			System.out.println("update Exception");
@@ -119,26 +118,26 @@ public class MovieAdminDAO {
 
 	}
 	
-	public MovieVO search_mv(String title) throws SQLException {
+	public MovieVO search_mv(String num) throws SQLException {
 		Connection conn = ds.getConnection(); /////////////////
 		PreparedStatement ps1;
 		ResultSet rs1;
 
 		// SnsboardVO sv1=null;
 		MovieVO mv1 = new MovieVO();
-		String sql = "SELECT * FROM MovieInfo where title=?";
+		String sql = "SELECT * FROM MovieInfo where num=?";
 		ps1 = conn.prepareStatement(sql);
-		ps1.setString(1, title);
+		ps1.setInt(1, Integer.parseInt(num));
 		rs1 = ps1.executeQuery();
 		if (rs1.next()) {
-			int num = rs1.getInt("num");
-			title = rs1.getString("title");
+//			int num = rs1.getInt("num");
+			String title = rs1.getString("title");
 			String dir = rs1.getString("dir");
 			int bookp = rs1.getInt("bookp");
 			String day = rs1.getString("day");
 			
 			// sv1=new SnsboardVO(snsjemok,snswriter,snscontent);
-			mv1.setNum(num);
+			mv1.setNum(Integer.parseInt(num));
 			mv1.setTitle(title);
 			mv1.setDir(dir);
 			mv1.setBookp(bookp);
