@@ -57,12 +57,15 @@
                 		</c:when>
                 		<c:otherwise>
 		                    <li>
+		                        <a class="page-scroll" href="#">${loginUser.name} (${loginUser.id}) 님 환영합니다.</a>
+		                    </li>
+		                    <li>
 		                        <a class="page-scroll" href="userLogout.lhj">Logout</a>
 		                    </li>
 		                	<c:choose>
 		                		<c:when test="${loginUser.auth == 'A'}">
 				                    <li>
-				                        <a class="page-scroll" href="adminMain.kms2">Admin</a>
+				                        <a class="page-scroll" href="adminAllinfo.kms2">Admin</a>
 				                    </li>
 		                		</c:when>
 		                	</c:choose>
@@ -73,6 +76,9 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="startBook.kms">Ticketing</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="about.chh">About</a>
                     </li>
 <!--                     
                     <li>
