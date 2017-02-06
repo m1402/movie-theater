@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import team.bigdata.common.service.Service;
 import team.bigdata.movie.service.MoviePlaying;
 import team.bigdata.movie.service.MovieSearch;
+import team.bigdata.movie.service.MovieUnreleased;
 
 /**
  * Servlet implementation class SnsFrontController
@@ -28,6 +29,7 @@ public class MovieController extends HttpServlet {
 		super();
 	}
 
+	
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
@@ -69,19 +71,19 @@ public class MovieController extends HttpServlet {
 		
 		
 		
-//		else if (url.equals("/movieUnreleased.ksr")) {
-//			service = new MovieUnreleased();
-//			try {
-//				service.execute(request, response);
-//			} catch (Exception e) {
-//				e.printStackTrace();
-//			}
-//			path = "movieUnreleased.jsp";
-//		}
+		
+		else if (url.equals("/movieUnreleased.ksr")) {
+			service = new MovieUnreleased();
+			try {
+				service.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			path = "movieUnreleased.jsp";
+		}
 		
 		
-		
-		
+	
 		
 		
 		

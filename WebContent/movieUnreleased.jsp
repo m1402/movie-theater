@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
@@ -5,10 +6,35 @@
 <!-- 공통 -->
 
 <!-- 컨텐츠 시작 -->
+
 <center>
-<h1>출시 예정영화</h1>
-<h3><font color="blue">
-   회원</font>님 로그인 환영합니다</h3>
+ <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="moviePlaying.ksr">현재상영작</a>
+                    </li>
+                    
+                    <li>
+                        <a class="page-scroll" href="movieUnreleased.ksr"><u>상영예정작</u></a>
+                    </li>
+                    
+                    <li>
+                        <a class="page-scroll" href="movieRanking.ksr">영화예매순위</a>
+                    </li>
+
+</ul>
+</div>
+</center>
+
+
+
+
+
+<center>
+<h1>상영예정작
+</h1>
+
+
 
 <form action="#" method="post">
  
@@ -27,8 +53,7 @@
 	</table>
 </form>
 
-<table border="1" cellpadding="0" cellspacing="0" 
-width="700">
+<table border="1" cellpadding="0" cellspacing="0" width="700">
 <tr>
 	<th bgcolor="orange" width="50">개봉일</th>
 	<th bgcolor="orange" width="350">영화</th>
@@ -90,7 +115,8 @@ width="700">
 	<td align="center" width="100" height="120">2017-03-30</td>
 	<td align="left" width="350">
 	<img src="static/img/movie/lovemovie.jpg" width="50" height="70"></br>
-	<a href="getBoard.jsp">예매하기</a></td>
+	<a href="getBoard.jsp"
+	>예매하기</a></td>
 	<td align="center" width="100">사랑의 시대</td>
 	<td align="center" width="100">토마스 빈터베르그
 	</td>

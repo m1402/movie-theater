@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
@@ -5,10 +6,38 @@
 <!-- 공통 -->
 
 <!-- 컨텐츠 시작 -->
+
+<center>
+ <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="moviePlaying.ksr">현재상영작</a>
+                    </li>
+                    
+                    <li>
+                        <a class="page-scroll" href="movieUnreleased.ksr">상영예정작</a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a class="page-scroll" href="movieRanking.ksr"><u>영화예매순위</u></a>
+                    </li>
+
+</ul>
+</div>
+</center>
+
+
+
+
+
+
+
+
+
 <center>
 <h1>영화예매순위</h1>
-<h3><font color="blue">
-   회원</font>님 로그인 환영합니다</h3>
+
 
 <form action="#" method="post">
  
@@ -195,6 +224,9 @@ width="700">
 
 	</td>
 	</tr>
+	</table>
+	</center>
+	
 <!-- // 컨텐츠 종료 -->
 
 <!-- // 공통 -->

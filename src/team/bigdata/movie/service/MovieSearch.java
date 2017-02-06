@@ -21,5 +21,13 @@ public class MovieSearch implements Service {
 //		MovieVO mv1 = moviedao1.search_movie(movieSearch);
 //
 //		request.setAttribute("mv1", mv1);
+
+		
+		
+		
+		
+		
+		
+		
 	}
 }

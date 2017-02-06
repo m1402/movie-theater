@@ -42,7 +42,11 @@ public class MovieDAO {
 				+ " WHERE num >= ?"
 				+ "	AND num <= ?";
 
-		//
+	
+				
+
+
+				
 		ps1 = conn.prepareStatement(sql);
 		ps1.setInt(1, movieStartNum);
 		ps1.setInt(2, movieEndNum);
@@ -50,6 +54,12 @@ public class MovieDAO {
 		
 		// 쿼리 실행
 		rs1 = ps1.executeQuery();
+		
+		
+		
+		
+	
+		
 		
 		// 데이터 가공
 		while (rs1.next()) {

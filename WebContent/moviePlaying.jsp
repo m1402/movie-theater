@@ -7,6 +7,28 @@
 
 <!-- 컨텐츠 시작 -->
 
+
+<center>
+ <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="moviePlaying.ksr"><u>현재상영작</u></a>
+                    </li>
+                    
+                    <li>
+                        <a class="page-scroll" href="movieUnreleased.ksr">상영예정작</a>
+                    </li>
+                    
+                    <li>
+                        <a class="page-scroll" href="movieRanking.ksr">영화예매순위</a>
+                    </li>
+
+</ul>
+</div>
+</center>
+
+
+
 <center>
 <h1>현재 상영작</h1>
 
@@ -29,6 +51,7 @@
 
 <table border="1" cellpadding="0" cellspacing="0" 
 width="700">
+
 <tr>
 	<th bgcolor="orange" width="50"></th>
 	<th bgcolor="orange" width="350">영화</th>

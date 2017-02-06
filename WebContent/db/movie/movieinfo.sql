@@ -11,20 +11,20 @@ create table MovieInfo (
 
 --상영예정영화
 
-insert into MovieInfo (num, title, dir, day)
-values (1, '폴링 스노우', '샤밈 샤리프', '20170222');
+insert into MovieInfo (num, title, dir, imgurl, day)
+values (1, '폴링 스노우', '샤밈 샤리프', 'fallingsnow', '20170222');
 
-insert into MovieInfo (num, title, dir, day)
-values (2, '스노든', '올리버 스톤', '20170301');
+insert into MovieInfo (num, title, dir, imgurl, day)
+values (2, '스노든', '올리버 스톤', 'snorden', '20170301');
 
-insert into MovieInfo (num, title, dir, day)
-values (3, '더 큐어', '고어 버번스키', '20170201');
+insert into MovieInfo (num, title, dir, imgurl, day)
+values (3, '더 큐어', '고어 버번스키', 'thecure', '20170201');
 
-insert into MovieInfo (num, title, dir, day)
-values (4, '문라이트', '배리 젠킨스', '20170312');
+insert into MovieInfo (num, title, dir, imgurl, day)
+values (4, '문라이트', '배리 젠킨스', 'moonlight', '20170312');
 
-insert into MovieInfo (num, title, dir, day)
-values (5, '사랑의 시대', '토마스 빈터베르그', '20170330');
+insert into MovieInfo (num, title, dir, imgurl, day)
+values (5, '사랑의 시대', '토마스 빈터베르그', 'lovemovie', '20170330');
 
 
 
