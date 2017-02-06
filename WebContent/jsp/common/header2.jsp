@@ -44,6 +44,7 @@
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">Movie Theater</a>
+                
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -74,6 +75,13 @@
                     <li>
                         <a class="page-scroll" href="startBook.kms">Ticketing</a>
                     </li>
+                    <li>
+                        <a class="page-scroll" href="startBook.kms">Board</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="startBook.kms">Help</a>
+                    </li>
+                    
 <!--                     
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>

@@ -31,8 +31,8 @@
 	<tr>
 		<td colspan="5">
 		
-	<input type="submit" value="가자-글 하나 수정">
-			<input type="reset" value="수정취소">
+	<input type="submit" value="영화 수정">
+			<input type="reset" value="수정 취소">
         
   </td>
 	</tr>

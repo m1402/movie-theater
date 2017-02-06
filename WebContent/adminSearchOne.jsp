@@ -26,8 +26,8 @@
 	<tr>
 		<td colspan="5">
 		
-	<input type="submit" value="가자-수정하러">
-			<input type="reset" value="수정취소">
+	<input type="submit" value="영화 수정">
+			<input type="reset" value="수정 취소">
         <!-- 수정작성하러가면된다. dao에 update_sns()만든다 -->
   </td>
 	</tr>

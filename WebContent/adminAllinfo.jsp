@@ -10,7 +10,7 @@
 		<td colspan="5">
 		 
 		 <form  action="adminAllinfo.kms2" >
-			<input type="submit" value="가자-모두보기">
+			<input type="submit" value="영화 리스트 모두 보기">
           </form>
           
 		</td>

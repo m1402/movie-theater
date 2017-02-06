@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--  -->
+	<script type="text/javascript" src="jquery1/jquery-3.1.1.js"></script>
+	<script>
+	$(function(){ 
+		var soo=[1,2,3,4]; //0,1,2.. //1,2,3,4...
+		$.each(soo,function(index,value){
+			$('#title'+value).click(function(){
+				if($('#stitle' + value).is(':hidden')) //hide상태
+					$('#stitle' + value).show(); //보여줘
+				else //show 상태면?
+					$('#stitle' + value).hide(); //숨겨
+			});
+		});	
+	});
+	
+	</script>
+</head>
+<body>
+
+<div id="title1"><h3>스크린</h3> </div>
+
+	<div id="stitle1" style="display:none">
+		<ul>
+			<li><A href="s1.htm">영화제목들</A>
+			<li><A href="s2.htm">상영관안내</A>
+		</ul>
+	</div>
+  
+<div id="title2"> <h3>식당</h3> </div>
+   
+  <div id="stitle2"  style="display:none">
+    <ul>
+      <li><A href="s3.htm">음식메뉴안내</A>
+      <li><A href="s4.htm">맛집안내</A>
+    </ul>
+  </div>
+  
+<div id="title3"> <h3>후식</h3> </div>
+   
+  <div id="stitle3"  style="display:none">
+    <ul>
+      <li><A href="s5.htm">커피메뉴안내</A>
+      <li><A href="s6.htm">차메뉴안내</A>
+    </ul>
+  </div>
+    
+<div id="title4"> <h3>주차</h3> </div>
+   
+  <div id="stitle4"  style="display:none">
+    <ul>
+      <li><A href="s1.htm">주차장약도</A>
+      <li><A href="s2.htm">주차요금안내</A>
+    </ul>
+  </div>  
+
+</body>
+</html>
